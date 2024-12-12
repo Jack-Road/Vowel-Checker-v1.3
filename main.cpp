@@ -7,12 +7,12 @@ int nonalphCount;
 int checkPosition;
 
 int vowelCheck(int inputTotal, string inputSentence){//vowelCheck function returns the total number of vowels present in the user's input string
-    int resultVowel, checkPosition;//resultVowel contains the vowel total, and is returned by this function
+    int resultVowel, checkPosition;//resultVowel contains the total vowel count
     resultVowel = 0;
     nonalphCount = 0;
 
 
-    while(checkPosition < inputTotal){//check position is an integer which holds the position in the sentence of our character identifier
+    while(checkPosition < inputTotal){//checkPosition is an integer which holds the position of our character identifier(checkTicker) within the user content string
         char checkTicker = inputSentence[checkPosition];//defines checkTicker as X letter in the inputted sentence, where X is the position of checkPosition
         if(checkTicker == 'A' || checkTicker == 'E' || checkTicker == 'I' || checkTicker == 'O' || checkTicker == 'U' || checkTicker == 'a' || checkTicker == 'e' || checkTicker == 'i' || checkTicker == 'o' || checkTicker == 'u'){
             resultVowel++;
@@ -59,7 +59,7 @@ int main()
             kill = true;
             break;
         }
-        cin.ignore();//clears input buffer before cycling "When Loop"
+        cin.ignore();//clears input buffer before cycling the "When Loop"
     }
     return 0;
 
