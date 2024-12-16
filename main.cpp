@@ -73,9 +73,9 @@ int main(){//Main function. Contains primary/root "While Loop" for processing us
     cout << "I can tell you the total count of precisely how many Vowels, Consonants,\nand Non-Alphanumeric characters there are contained within a provided\ncontent string.\n";
 
     while(!kill){//Primary "While Loop" to process user input, and to then to call on functions for this processing.
-        int inputCharTotal;//Declaring variables to be used in main scope.
-        int inputResultV;
-        int inputResultNA;
+        int inputCharTotal = 0;//Declaring variables to be used in main scope.
+        int inputResultV = 0;
+        int inputResultNA = 0;
         bool inputResultRun;
         string userString;
         char userRunString = 0;
@@ -88,7 +88,7 @@ int main(){//Main function. Contains primary/root "While Loop" for processing us
 
         cout << "\nTOTAL VOWEL COUNT: (" << inputResultV << ") vowels\nTOTAL LETTER COUNT: (" << inputCharTotal - inputResultNA << ") letters\n";//Displays results of count.
 
-        inputResultRun = inputCheckRun(userRunString);//Calls on function to ask user if they want to process another string.
+        inputResultRun = inputCheckRun(userRunString);//Calls on the inputCheckRun function which asks the user if they want to process another string.
         if(!inputResultRun){//Kills the program if user input declares bool kill = true;.
             kill = true;//Sets primary "While Loop" to false.
             break;
